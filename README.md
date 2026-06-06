@@ -1,56 +1,72 @@
-# Shooter Plane
+# Shooter Plane (Phaser 3)
 
-Game ini adalah proyek web sederhana untuk permainan tembak pesawat (plane shooter) built dengan HTML, JavaScript, dan Phaser 3.
+Game tembak pesawat 2D sederhana yang dibangun menggunakan HTML5, JavaScript, dan framework game **Phaser 3**. Proyek ini dibuat sebagai bagian dari pembelajaran/tugas (PJBL Kelas 11 Genap).
 
-## Teknologi (Tech Stack)
+---
 
-- **HTML**: Struktur halaman game dan pemanggilan skrip.
-- **JavaScript**: Logika permainan, scene, dan alur permainan.
-- **Phaser 3**: Engine game JavaScript untuk membuat game 2D dan menangani fisika arcade.
-- **Assets/Picture**: Folder untuk menyimpan gambar dan aset game.
+## 🎮 Fitur Utama
 
-## Struktur Proyek
+- **Menu Utama**: Tampilan menu interaktif sebelum memulai permainan.
+- **Pilih Hero (Pesawat)**: Pilihan karakter pesawat dengan statistik atau tampilan berbeda sebelum bertanding.
+- **Gameplay Tembak Pesawat**: Aksi menembak musuh, menghindari rintangan/peluru musuh, dan mengumpulkan poin.
+- **Game Over**: Layar akhir game yang menampilkan skor serta tombol untuk mencoba kembali (restart).
+- **Audio & Visual**: Menggunakan aset gambar dan suara untuk meningkatkan pengalaman bermain.
 
-- `index.html` - halaman utama untuk menjalankan game.
-- `sceneMenu.js` - scene menu utama.
-- `scenePilihHero.js` - scene pemilihan hero.
-- `scenePlay.js` - scene permainan utama.
-- `sceneGameOver.js` - scene game over.
-- `Assets/Picture/` - folder asset gambar.
+---
 
-## Cara Kloning
-
-1. Buka terminal atau Command Prompt.
-2. Jalankan perintah berikut:
-
-```bash
-git clone git https://github.com/Byatarade/Shooter-Plane-Phaser.git
-```
-
-3. Masuk ke folder proyek:
-
-```bash
-cd "e:\- Visual_Studio_Code\Game\Shooter Plane"
-```
-
-## Cara Penggunaan
-
-### Opsi 1: Buka langsung dari file
-
-1. Buka `index.html` dengan browser web.
-2. Game akan berjalan dan memuat Phaser dari CDN.
-
-### Opsi 2: Jalankan dengan server lokal (direkomendasikan)
-
-Jika browser Anda membatasi pemuatan file lokal, gunakan server lokal seperti Live Server.
-
-Lalu buka di browser:
+## 📂 Struktur Folder Proyek
 
 ```text
-http://127.0.0.1:5500/index.html
+Shooter/
+├── Shooter-Plane-Phaser/       # Folder utama game Phaser
+│   ├── Assets/                 # Aset gambar, suara, dan visual pendukung
+│   ├── index.html              # Entry point utama game
+│   ├── sceneMenu.js            # Layar menu utama game
+│   ├── scenePilihHero.js       # Layar pemilihan pesawat/hero
+│   ├── scenePlay.js            # Logika utama permainan (gameplay)
+│   └── sceneGameOver.js        # Layar setelah pemain kalah (game over)
+├── package.json                # Konfigurasi dependensi project (Phaser)
+└── README.md                   # Dokumentasi proyek (file ini)
 ```
 
-## Catatan
+---
 
-- Pastikan koneksi internet tersedia saat pertama menjalankan game karena Phaser 3 dimuat dari CDN.
-- Jika ingin mengembangkan lebih lanjut, Anda dapat menambahkan asset baru ke `Assets/Picture` dan mengubah skrip scene.
+## ⚙️ Persyaratan Sistem
+
+- Browser modern (Google Chrome, Firefox, Edge, Safari, dll.)
+- Web Server lokal (misal: **Live Server** di VS Code, Laragon, Python HTTP server, atau Node.js http-server) untuk menghindari isu kebijakan CORS saat memuat aset lokal secara dinamis.
+
+---
+
+## 🚀 Cara Menjalankan Game Secara Lokal
+
+### Langkah 1: Kloning Repositori
+Buka terminal Anda dan jalankan perintah berikut:
+```bash
+git clone https://github.com/LubaidArfaCasillas/Shooter.git
+cd Shooter
+```
+
+### Langkah 2: Menjalankan Web Server
+Karena Phaser memuat aset (gambar/audio) menggunakan AJAX, Anda membutuhkan server lokal:
+
+#### Opsi A: Menggunakan Live Server (VS Code)
+1. Buka folder `Shooter-Plane-Phaser` di VS Code.
+2. Klik kanan pada file `index.html` dan pilih **Open with Live Server**.
+
+#### Opsi B: Menggunakan Node.js (http-server)
+Jika Anda memiliki Node.js terinstal, Anda dapat menjalankan perintah berikut di terminal:
+```bash
+# Install http-server secara global (jika belum ada)
+npm install -g http-server
+
+# Jalankan server di dalam folder game
+cd Shooter-Plane-Phaser
+http-server
+```
+Buka URL yang diberikan (biasanya `http://localhost:8080`) di browser Anda.
+
+---
+
+## 🛠️ Kontributor
+* **Lubaid Arfa Casillas**
